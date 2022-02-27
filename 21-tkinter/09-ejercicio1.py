@@ -13,20 +13,32 @@ ventana.geometry("400x400")
 ventana.config(bd=25)
 
 def getSuma():
-    resultado.set(float(primer_dato.get()) + float(segundo_dato.get()))
-    mostrarResultado()
+    try:
+        resultado.set(float(primer_dato.get()) + float(segundo_dato.get()))
+        mostrarResultado()
+    except:
+        MessageBox.messagebox.showerror("Error", "Introduce bien los datos")
 
 def getResta():
-    resultado.set(float(primer_dato.get()) - float(segundo_dato.get()))
-    mostrarResultado()
+    try:
+        resultado.set(float(primer_dato.get()) - float(segundo_dato.get()))
+        mostrarResultado()
+    except:
+        MessageBox.messagebox.showerror("Error", "Introduce bien los datos")
 
 def getMult():
-    resultado.set(float(primer_dato.get()) * float(segundo_dato.get()))
-    mostrarResultado()
+    try:
+        resultado.set(float(primer_dato.get()) * float(segundo_dato.get()))
+        mostrarResultado()
+    except:
+        MessageBox.messagebox.showerror("Error", "Introduce bien los datos")
 
 def getDiv():
-    resultado.set(float(primer_dato.get()) / float(segundo_dato.get()))
-    mostrarResultado()
+    try:
+        resultado.set(float(primer_dato.get()) / float(segundo_dato.get()))
+        mostrarResultado()
+    except:
+        MessageBox.messagebox.showerror("Error", "Introduce bien los datos")
 
 def mostrarResultado():
     MessageBox.showinfo("Resultado", f"El resultado es: {resultado.get()}")
